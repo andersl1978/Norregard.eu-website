@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="da" data-lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anders Nørregård</title>
+<meta name="description" content="Anders Nørregård – Finance, Treasury & Interim Leadership. 20+ års erfaring med finansiel ledelse, treasury og transformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: single centered column (max 880px), alternating paper/white bands, dark contact footer. Two languages: .da / .en, switched on <html data-lang> */
+:root {
+  --paper: #f6f4ef;
+  --surface: #ffffff;
+  --ink: #1d2430;
+  --muted: #5b6270;
+  --line: #e6e1d7;
+  --accent: #8a5a2b;
+  --accent-ink: #ffffff;
+  --chip: #efe8dc;
+  --chip-ink: #5a3d20;
+  --footer: #1d2430;
+  --footer-ink: #f6f4ef;
+  --footer-muted: #9aa1ad;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #16191f; --surface: #1c2027; --ink: #ece8e0; --muted: #a3a8b2; --line: #2d323b;
+    --accent: #c08a55; --accent-ink: #16191f; --chip: #2b2620; --chip-ink: #e2c3a0;
+    --footer: #0f1115; --footer-ink: #ece8e0; --footer-muted: #8b919c; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #16191f; --surface: #1c2027; --ink: #ece8e0; --muted: #a3a8b2; --line: #2d323b;
+  --accent: #c08a55; --accent-ink: #16191f; --chip: #2b2620; --chip-ink: #e2c3a0;
+  --footer: #0f1115; --footer-ink: #ece8e0; --footer-muted: #8b919c; color-scheme: dark;
+}
+
+/* Language switching */
+html:not([data-lang="en"]) .en, html[data-lang="en"] .da { display: none !important; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 880px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Header */
+.site-head { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding-block: 18px; }
+.brand { font-family: var(--font-display); font-size: 1.3rem; text-decoration: none; }
+.head-right { display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap; }
+.nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 0.95rem; }
+.nav a { text-decoration: none; color: var(--ink); }
+.nav a:hover { color: var(--accent); }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.lang button { font: 600 0.75rem/1 var(--font-body); letter-spacing: 0.06em; border: 0; background: transparent; color: var(--muted); padding: 6px 10px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* Sections */
+section { padding-block: 72px; border-bottom: 1px solid var(--line); scroll-margin-top: 70px; }
+section.white { background: var(--surface); }
+section h2 { font-size: 1.75rem; margin-bottom: 20px; }
+.lede { color: var(--muted); font-size: 0.95rem; margin-top: -12px; margin-bottom: 28px; }
+
+/* Hero */
+.hero { padding-block: 96px 88px; }
+.eyebrow { color: var(--accent); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 3.8rem); line-height: 1.1; margin-bottom: 24px; }
+.hero p.intro { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--muted); max-width: 40em; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.btn { display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 3px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1px solid transparent; cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+
+/* Om mig */
+.prose { max-width: 36em; display: grid; gap: 16px; }
+
+/* Offer cards */
+.offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.offer { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 26px 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.offer h3 { font-size: 1.2rem; line-height: 1.3; }
+.offer ul { margin: 0; padding-left: 14px; display: grid; gap: 10px; font-size: 0.9rem; }
+.offer li::marker { color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+.chip { background: var(--chip); color: var(--chip-ink); font-size: 0.75rem; font-weight: 600; padding: 5px 11px; border-radius: 999px; }
+
+/* Cases */
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.case { background: var(--paper); border-radius: 6px; padding: 26px 24px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.case .tag { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.case h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; }
+.case p { font-size: 0.9rem; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 8px 0 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.timeline li:last-child { border-bottom: 0; }
+.when { color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.role { font-weight: 600; }
+.org { color: var(--muted); font-size: 0.9rem; }
+.edu { margin-top: 40px; font-size: 0.9rem; }
+.edu h4 { margin: 0 0 6px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Contact */
+.contact { background: var(--footer); color: var(--footer-ink); padding-block: 72px 48px; border: 0; }
+.contact h2 { color: var(--footer-ink); }
+.contact p { max-width: 30em; opacity: 0.9; }
+.contact .btn-ghost { background: transparent; color: var(--footer-ink); border-color: color-mix(in srgb, var(--footer-ink) 25%, transparent); }
+.fine { margin-top: 48px; font-size: 0.8rem; color: var(--footer-muted); }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Anders Nørregård</a>
+    <div class="head-right">
+      <nav class="nav" aria-label="Menu">
+        <a href="#ydelser"><span class="da">Ydelser</span><span class="en">Services</span></a>
+        <a href="#cases">Cases</a>
+        <a href="#baggrund"><span class="da">Baggrund</span><span class="en">Background</span></a>
+        <a href="#kontakt"><span class="da">Kontakt</span><span class="en">Contact</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Sprog / Language">
+        <button type="button" id="lang-da" data-set-lang="da" aria-pressed="true">DA</button>
+        <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Finance, Treasury &amp; Interim Leadership</p>
+      <h1>Anders Nørregård</h1>
+      <p class="intro da">20+ års erfaring med finansiel ledelse, treasury, investment management og transformation. Tilgængelig til interim-opgaver, bestyrelsesposter og projektrådgivning.</p>
+      <p class="intro en">20+ years of experience in financial leadership, treasury, investment management and transformation. Available for interim assignments, board positions and project advisory.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:andersn@outlook.com"><span class="da">Send en mail</span><span class="en">Send an email</span></a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/andersnorregaard" target="_blank" rel="noopener"><span class="da">Se LinkedIn</span><span class="en">View LinkedIn</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="white" id="om">
+    <div class="wrap">
+      <h2><span class="da">Om mig</span><span class="en">About me</span></h2>
+      <div class="prose da">
+        <p>Senior finance- og operations-executive med mere end 20 års erfaring inden for finansiel ledelse, treasury, investment management, projektledelse, risikostyring og transformation. Har ledet både specialistfunktioner og funktionsledere, med direkte CEO- og bestyrelseseksponering.</p>
+        <p>Aktuelt VP Finance &amp; Operations hos Archon, en teknologivirksomhed med ca. 30 medarbejdere. Tidligere mere end 15 år hos VKR Holding (VELUX-koncernen), senest som Senior Director, Head of Group Finance &amp; Operations. Har desuden været Interim CFO under en ledelsesovergang, haft investeringskomité-ansvar for ca. DKK 20 mia., og mere end et årti med bestyrelses- og formandserfaring.</p>
+      </div>
+      <div class="prose en">
+        <p>Senior finance and operations executive with more than 20 years of experience in financial leadership, treasury, investment management, project management, risk management and transformation. Has led both specialist teams and managers of functions, with direct exposure to the CEO and board.</p>
+        <p>Currently VP Finance &amp; Operations at Archon, a technology company with around 30 employees. Previously more than 15 years at VKR Holding (the VELUX Group), most recently as Senior Director, Head of Group Finance &amp; Operations. Has also served as Interim CFO during a leadership transition, held investment committee responsibility for approx. DKK 20 billion, and has more than a decade of board and chairman experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ydelser">
+    <div class="wrap">
+      <h2><span class="da">Hvad jeg tilbyder</span><span class="en">What I offer</span></h2>
+      <p class="lede"><span class="da">Tre spor, der kan stå alene eller kombineres.</span><span class="en">Three tracks that can stand alone or be combined.</span></p>
+      <div class="offers">
+        <article class="offer">
+          <h3>Interim CFO / Head of Treasury</h3>
+          <ul class="da">
+            <li>Fuld finansiel ledelse ved pludselig afgang af CFO/finansdirektør (dokumenteret: Arcon-Sunmark, 7 måneder under samtidig CEO/CFO-transition)</li>
+            <li>Ledelse af samlet finansorganisation (Tax, Treasury, Accounting, Middle Office, IT)</li>
+            <li>Systemimplementering og procesoptimering under tidspres</li>
+            <li>Rapportering og beslutningsstøtte til CEO og bestyrelse i overgangsperioder</li>
+            <li>Overtagelse af likviditets-, funding- og risikostyring med det samme</li>
+          </ul>
+          <ul class="en">
+            <li>Full financial leadership when a CFO or finance director leaves suddenly (track record: Arcon-Sunmark, 7 months during a simultaneous CEO/CFO transition)</li>
+            <li>Leading the entire finance organisation (Tax, Treasury, Accounting, Middle Office, IT)</li>
+            <li>System implementation and process optimisation under time pressure</li>
+            <li>Reporting and decision support for the CEO and board during transition periods</li>
+            <li>Taking over liquidity, funding and risk management from day one</li>
+          </ul>
+          <div class="chips da">
+            <span class="chip">Ledelse af ledere</span><span class="chip">Change Management</span><span class="chip">Treasury &amp; Likviditet</span><span class="chip">Finansiel Risiko</span><span class="chip">CEO/Board Rapportering</span><span class="chip">PMO &amp; Transformation</span>
+          </div>
+          <div class="chips en">
+            <span class="chip">Leading leaders</span><span class="chip">Change Management</span><span class="chip">Treasury &amp; Liquidity</span><span class="chip">Financial Risk</span><span class="chip">CEO/Board Reporting</span><span class="chip">PMO &amp; Transformation</span>
+          </div>
+        </article>
+        <article class="offer">
+          <h3><span class="da">Bestyrelsesposter</span><span class="en">Board positions</span></h3>
+          <ul class="da">
+            <li>Finansiel og investeringsmæssig oversight (Core Bolig IV, siden 2015)</li>
+            <li>Formandsrolle med fokus på strategisk og finansiel sparring (Myllerup Entreprenør, 2013–2022)</li>
+            <li>Erfaring med generationsskifte og ejerskabsovergange</li>
+            <li>Governance, risikostyring og performance-opfølgning på bestyrelsesniveau</li>
+            <li>Investeringskomité-erfaring (porteføljeovervågning og allokering, ca. DKK 20 mia.)</li>
+          </ul>
+          <ul class="en">
+            <li>Financial and investment oversight (Core Bolig IV, since 2015)</li>
+            <li>Chairman role focused on strategic and financial sparring (Myllerup Entreprenør, 2013–2022)</li>
+            <li>Experience with generational handovers and ownership transitions</li>
+            <li>Governance, risk management and performance follow-up at board level</li>
+            <li>Investment committee experience (portfolio monitoring and allocation, approx. DKK 20 billion)</li>
+          </ul>
+          <div class="chips da">
+            <span class="chip">Finance</span><span class="chip">AI</span><span class="chip">Tech</span><span class="chip">Banking</span><span class="chip">Ledelsessparring</span><span class="chip">Governance</span>
+          </div>
+          <div class="chips en">
+            <span class="chip">Finance</span><span class="chip">AI</span><span class="chip">Tech</span><span class="chip">Banking</span><span class="chip">Leadership sparring</span><span class="chip">Governance</span>
+          </div>
+        </article>
+        <article class="offer">
+          <h3><span class="da">Rådgivning og/eller projektansættelser</span><span class="en">Advisory and/or project engagements</span></h3>
+          <ul class="da">
+            <li>Bankudbud (bank-tender og konsolidering af bankforbindelser)</li>
+            <li>Låneforhandling (finansiering, gældsoptagelse, vilkår)</li>
+            <li>TMS (valg og implementering af treasury management-systemer)</li>
+            <li>Mergers (finansiel due diligence, integration, treasury-setup ved opkøb)</li>
+            <li>De-mergers (frasalg, carve-outs, opsplitning af treasury-funktioner)</li>
+            <li>Opstart af treasuryafdeling (struktur, processer og governance, så funktionen kan drives videre af en mere junior medarbejder)</li>
+            <li>Investment management (medlem af investeringskomité sammen med CIO med fokus på investeringer, risiko, timing og likviditet; ansvar for treasury og Middle Office på den finansielle portefølje)</li>
+            <li>Projektledelse og PMO (bl.a. transformation af en juridisk afdeling, sikker AI-chatbot på fortrolige data og optimering af en corporate finance-afdeling)</li>
+          </ul>
+          <ul class="en">
+            <li>Bank tenders (tendering and consolidation of banking relationships)</li>
+            <li>Loan negotiations (financing, debt raising, terms)</li>
+            <li>TMS (selection and implementation of treasury management systems)</li>
+            <li>Mergers (financial due diligence, integration, treasury set-up after acquisitions)</li>
+            <li>De-mergers (divestments, carve-outs, separation of treasury functions)</li>
+            <li>Setting up a treasury department (structure, processes and governance, so a more junior employee can run the function going forward)</li>
+            <li>Investment management (investment committee member alongside the CIO, focused on investments, risk, timing and liquidity; responsible for treasury and Middle Office for the financial portfolio)</li>
+            <li>Project management and PMO (including transformation of a legal department, a secure AI chatbot on confidential data, and optimisation of a corporate finance department)</li>
+          </ul>
+          <div class="chips da">
+            <span class="chip">Corporate Finance</span><span class="chip">M&amp;A &amp; Carve-outs</span><span class="chip">Bankforhandling</span><span class="chip">TMS-implementering</span><span class="chip">Treasury-opbygning</span><span class="chip">Financial Due Diligence</span><span class="chip">Investment Management</span><span class="chip">Projektledelse</span>
+          </div>
+          <div class="chips en">
+            <span class="chip">Corporate Finance</span><span class="chip">M&amp;A &amp; Carve-outs</span><span class="chip">Bank negotiations</span><span class="chip">TMS implementation</span><span class="chip">Treasury build-up</span><span class="chip">Financial Due Diligence</span><span class="chip">Investment Management</span><span class="chip">Project Management</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="white" id="cases">
+    <div class="wrap">
+      <h2><span class="da">Udvalgte cases</span><span class="en">Selected cases</span></h2>
+      <div class="cases">
+        <article class="case">
+          <span class="tag"><span class="da">Bankudbud</span><span class="en">Bank tender</span></span>
+          <h3><span class="da">Global banktender og -konsolidering</span><span class="en">Global bank tender and consolidation</span></h3>
+          <p class="da">Ledte en global banktender og reducerede banknetværket fra ca. 25 til 5 kernebanker på tværs af aktiviteter i ca. 40 lande.</p>
+          <p class="en">Led a global bank tender and reduced the banking network from around 25 to 5 core banks across operations in about 40 countries.</p>
+        </article>
+        <article class="case">
+          <span class="tag">Interim CFO</span>
+          <h3><span class="da">Ledelsesovergang hos Arcon-Sunmark</span><span class="en">Leadership transition at Arcon-Sunmark</span></h3>
+          <p class="da">Trådte ind som Interim CFO efter samtidig afgang af CEO og CFO. Sikrede finansiel kontinuitet i 7 måneder, ledte implementeringen af Microsoft Business Central og reducerede rapporteringscyklussen med 2 arbejdsdage.</p>
+          <p class="en">Stepped in as Interim CFO after the CEO and CFO left at the same time. Ensured financial continuity for 7 months, led the implementation of Microsoft Business Central and shortened the reporting cycle by 2 working days.</p>
+        </article>
+        <article class="case">
+          <span class="tag"><span class="da">Treasury-opbygning</span><span class="en">Treasury build-up</span></span>
+          <h3><span class="da">Uafhængig Middle Office-funktion</span><span class="en">Independent Middle Office function</span></h3>
+          <p class="da">Etablerede en uafhængig Middle Office-funktion og udvidede performance management til alternative investeringer, hvilket styrkede uafhængig performancemåling, risiko- og eksponeringsrapportering.</p>
+          <p class="en">Established an independent Middle Office function and extended performance management to alternative investments, strengthening independent performance measurement and risk and exposure reporting.</p>
+        </article>
+        <article class="case">
+          <span class="tag"><span class="da">Investeringsgovernance</span><span class="en">Investment governance</span></span>
+          <h3><span class="da">Investeringskomité og porteføljestyring</span><span class="en">Investment committee and portfolio management</span></h3>
+          <p class="da">Sad i VKR Holdings Investeringskomité og bidrog til investeringsvurdering, porteføljeovervågning og allokeringsbeslutninger for ca. DKK 20 mia., med et investeringsportfolio på ca. DKK 2,5 mia. primært i obligationer.</p>
+          <p class="en">Member of VKR Holding's Investment Committee, contributing to investment assessment, portfolio monitoring and allocation decisions for approx. DKK 20 billion, including an investment portfolio of approx. DKK 2.5 billion, mainly in bonds.</p>
+        </article>
+        <article class="case">
+          <span class="tag"><span class="da">PMO &amp; AI</span><span class="en">PMO &amp; AI</span></span>
+          <h3><span class="da">Sikker AI-chatbot på fortrolige data</span><span class="en">Secure AI chatbot on confidential data</span></h3>
+          <p class="da">Introducerede som PMO i VKR Holding i 2023 en sikker chatbot, der kunne arbejde med koncernens fortrolige data. Et tidligt skridt, før generativ AI var udbredt i danske virksomheder.</p>
+          <p class="en">As PMO at VKR Holding, introduced a secure chatbot in 2023 that could work with the group's confidential data. An early move, before generative AI was widespread in Danish companies.</p>
+        </article>
+        <article class="case">
+          <span class="tag"><span class="da">PMO &amp; transformation</span><span class="en">PMO &amp; transformation</span></span>
+          <h3><span class="da">Transformation af Legal og Corporate Finance</span><span class="en">Transforming Legal and Corporate Finance</span></h3>
+          <p class="da">Ledte som PMO transformationen af VKR Holdings juridiske afdeling og et projekt, der optimerede corporate finance-afdelingens arbejdsgange og organisering.</p>
+          <p class="en">As PMO, led the transformation of VKR Holding's legal department and a project that optimised the corporate finance department's ways of working and organisation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="baggrund">
+    <div class="wrap">
+      <h2><span class="da">Baggrund</span><span class="en">Background</span></h2>
+      <ol class="timeline" reversed>
+        <li><span class="when"><span class="da">Nov. 2025 – nu</span><span class="en">Nov 2025 – present</span></span><div><div class="role">VP Finance &amp; Operations</div><div class="org">Archon</div></div></li>
+        <li><span class="when"><span class="da">Marts 2019 – okt. 2025</span><span class="en">Mar 2019 – Oct 2025</span></span><div><div class="role">Senior Director, Head of Group Finance &amp; Operations</div><div class="org">VKR Holding A/S (VELUX)</div></div></li>
+        <li><span class="when"><span class="da">Aug. 2018 – feb. 2019</span><span class="en">Aug 2018 – Feb 2019</span></span><div><div class="role">CFO, Interim</div><div class="org">Arcon-Sunmark A/S</div></div></li>
+        <li><span class="when"><span class="da">Marts 2011 – juli 2018</span><span class="en">Mar 2011 – Jul 2018</span></span><div><div class="role">Head of Group Treasury</div><div class="org">VKR Holding A/S</div></div></li>
+      </ol>
+      <div class="edu">
+        <h4><span class="da">Uddannelse</span><span class="en">Education</span></h4>
+        <p class="da">INSEAD, High Impact Leadership Programme (2024) · CBS, HD i Regnskab og Økonomistyring (2006–2008) · CBS, cand.merc. i Finansiering (2003–2007) · Aarhus University / Oregon State University (2000–2003)</p>
+        <p class="en">INSEAD, High Impact Leadership Programme (2024) · CBS, Graduate Diploma (HD) in Accounting and Financial Management (2006–2008) · CBS, MSc in Finance (cand.merc.) (2003–2007) · Aarhus University / Oregon State University (2000–2003)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <h2><span class="da">Kontakt</span><span class="en">Contact</span></h2>
+      <p class="da">Åben for henvendelser om interim-opgaver, bestyrelsesposter og projektrådgivning inden for finance og treasury.</p>
+      <p class="en">Open to enquiries about interim assignments, board positions and project advisory in finance and treasury.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:andersn@outlook.com">andersn@outlook.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/andersnorregaard" target="_blank" rel="noopener">linkedin.com/in/andersnorregaard</a>
+      </div>
+      <p class="fine">Anders Nørregård · <span class="da">København</span><span class="en">Copenhagen</span></p>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var meta = document.querySelector('meta[name="description"]');
+  var desc = {
+    da: "Anders Nørregård – Finance, Treasury & Interim Leadership. 20+ års erfaring med finansiel ledelse, treasury og transformation.",
+    en: "Anders Nørregård – Finance, Treasury & Interim Leadership. 20+ years of experience in financial leadership, treasury and transformation."
+  };
+  function setLang(lang, save) {
+    if (lang !== "en") lang = "da";
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    if (meta) meta.setAttribute("content", desc[lang]);
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang));
+    });
+    if (save) { try { localStorage.setItem("lang", lang); } catch (e) {} }
+  }
+  var initial = "da";
+  if (location.hash === "#en") initial = "en";
+  else { try { initial = localStorage.getItem("lang") || "da"; } catch (e) {} }
+  setLang(initial, false);
+  document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-set-lang"), true); });
+  });
+})();
+</script>
+</body>
+</html>
